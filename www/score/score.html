@@ -1,0 +1,23 @@
+<ion-view view-title="Score">
+	<ion-content  class="has-footer">
+		<ion-refresher pulling-text="Refresh Score..." on-refresh="doRefresh()">
+		</ion-refresher>
+		<div class="card score" ng-repeat = "item in score | filter:search">
+			<div class="item item-text-wrap">
+				<h2 class="score-title" ng-bind-html="item.title"></h2>
+				<p class="score-description" ng-bind-html="item.description"></p>
+				<p class="score-teams"><strong>{{item.t1}} v {{item.t2}}</strong></p>
+				<div class="positive score-link" ng-click="openLink(item.link)">
+					View Full Scorecard
+				</div>
+			</div>
+		</div>
+		<div class="card" ng-if="!score.length">
+			<div class="item item-text-wrap text-center">
+				<h2 class="score-title">No score available</h2>
+			</div>
+		</div>
+
+		<ion-infinite-scroll ng-if="!noMoreItemsAvailable" on-infinite="loadMore()" distance="100%"></ion-infinite-scroll>
+	</ion-content>
+</ion-view>

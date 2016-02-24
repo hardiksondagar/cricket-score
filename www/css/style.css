@@ -1,0 +1,47 @@
+body, h1, h2, h3, h4, h5, h6, p, div,a,.tab-item, button, input {
+	font-family: 'RobotoDraft';
+}
+
+ion-content{
+	background-color: #EEEEEE;
+}
+
+.score .score-title , .news .news-title{
+	color:#333;
+	font-weight: 500;
+}
+
+.score .score-description , .news .news-description{
+	padding:5px 0;
+}
+
+.score .score-link, .news .news-link {
+	margin-top: 10px;
+	font-size:85%;
+}
+
+.score .score-title, .score .score-link,.score .score-description, .score .score-teams {
+	color:#fff;
+}
+
+.card {
+	margin:10px;
+	border-radius: 10px;
+	border-top-left-radius:0;
+	border-top-right-radius:0;
+	-webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+
+.card.score .item {
+	background-color: rgba(74, 144, 226, 1);
+}
+
+.card.news {
+	border-top:3px solid rgba(74, 144, 226, 1);
+}
+
+.tab-item{
+	font-weight: bold;
+	color:rgba(74, 144, 226, 1);
+}

@@ -1,0 +1,22 @@
+<ion-view view-title="News">
+	<ion-content class="has-footer">
+		<ion-refresher
+		pulling-text="Refresh News..."
+		on-refresh="doRefresh()">
+	</ion-refresher>
+	<div class="card news" ng-repeat = "item in news | filter:search ">
+		<div class="item item-text-wrap">
+			<h2 class="news-title" ng-bind-html="item.title"></h2>
+			<p class="news-description" ng-bind-html="item.description"></p>
+			<div class="positive news-link" ng-click="openLink(item.link)">Read Article</div>
+		</div>
+	</div>
+	<div class="card" ng-if="!news.length">
+		<div class="item item-text-wrap text-center">
+			<h2 class="news-title">No news available</h2>
+		</div>
+	</div>
+	<ion-infinite-scroll
+ ng-if="!newsPagiateRef.hasNext()"  icon="ion-loading-d" on-infinite="loadMore()" distance="100%"></ion-infinite-scroll>
+</ion-content>
+</ion-view>
