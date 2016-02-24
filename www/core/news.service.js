@@ -25,7 +25,7 @@
 
 
     function getPaginateRef() {
-      return new Firebase.util.Scroll(firebaseDataService.news, 'modifiedAt');
+      return new Firebase.util.Scroll(firebaseDataService.news, 'nmodifiedAt');
     }
 
   }

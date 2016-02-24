@@ -25,7 +25,7 @@
 
 
     function getPaginateRef() {
-      return new Firebase.util.Scroll(firebaseDataService.score, 'modifiedAt');
+      return new Firebase.util.Scroll(firebaseDataService.score, 'nmodifiedAt');
     }
 
   }
